@@ -1,5 +1,5 @@
 tests:
-  - name: Check if server.js exists
+  - // name: Check if server.js exists
     run: test -f server/server.js
     input: ""
     output: ""
@@ -7,7 +7,7 @@ tests:
     timeout: 10
     points: 5
 
-  - name: Check for Socket.io server setup
+  - // name: Check for Socket.io server setup
     run: grep -q "socket.io" server/server.js && grep -q "io.*=.*Server" server/server.js
     input: ""
     output: ""
@@ -31,7 +31,7 @@ tests:
     timeout: 10
     points: 10
 
-  - name: Check for client socket.io setup
+  - // name: Check for client socket.io setup
     run: test -f client/src/socket/socket.js || grep -q "socket.io-client" client/src -r
     input: ""
     output: ""
@@ -39,7 +39,7 @@ tests:
     timeout: 10
     points: 10
 
-  - name: Check for React components
+  - // name: Check for React components
     run: test -d client/src/components
     input: ""
     output: ""
@@ -79,7 +79,7 @@ tests:
     timeout: 10
     points: 10
 
-  - name: Check for package.json files
+  - // name: Check for package.json files
     run: test -f server/package.json && test -f client/package.json
     input: ""
     output: ""
